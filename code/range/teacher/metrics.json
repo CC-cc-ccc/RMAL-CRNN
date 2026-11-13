@@ -1,0 +1,132 @@
+{
+  "protocol": {
+    "90101": "76s onward, 200s",
+    "90102": "middle 200s",
+    "90105": "last 400s",
+    "channels_removed": [
+      9,
+      15
+    ]
+  },
+  "domains": [
+    "HHT",
+    "LOFAR",
+    "FFT",
+    "WPT",
+    "HHSA",
+    "MFCC"
+  ],
+  "top20_channels": [
+    7,
+    25,
+    29,
+    32,
+    19,
+    4,
+    10,
+    12,
+    26,
+    1,
+    30,
+    3,
+    31,
+    8,
+    6,
+    27,
+    24,
+    16,
+    13,
+    22
+  ],
+  "extra_test_channel": 20,
+  "threshold": 0.5,
+  "top20_test": {
+    "accuracy": 0.930625,
+    "f1": 0.9275456919060052,
+    "auc": 0.9806128906250001,
+    "false_alarm_rate": 0.026875,
+    "recall": 0.888125,
+    "confusion_matrix": [
+      [
+        1557,
+        43
+      ],
+      [
+        179,
+        1421
+      ]
+    ]
+  },
+  "extra_test_raw": {
+    "accuracy": 0.85125,
+    "f1": 0.8658399098083427,
+    "auc": 0.9670749999999999,
+    "false_alarm_rate": 0.2575,
+    "recall": 0.96,
+    "confusion_matrix": [
+      [
+        297,
+        103
+      ],
+      [
+        16,
+        384
+      ]
+    ]
+  },
+  "extra_test_smoothed": {
+    "accuracy": 0.87375,
+    "f1": 0.8845714285714286,
+    "auc": 0.9670749999999999,
+    "false_alarm_rate": 0.22,
+    "recall": 0.9675,
+    "confusion_matrix": [
+      [
+        312,
+        88
+      ],
+      [
+        13,
+        387
+      ]
+    ]
+  },
+  "extra_test_conservative": {
+    "threshold": 0.98,
+    "raw": {
+      "accuracy": 0.9325,
+      "f1": 0.9321608040201005,
+      "auc": 0.9670749999999999,
+      "false_alarm_rate": 0.0625,
+      "recall": 0.9275,
+      "confusion_matrix": [
+        [
+          375,
+          25
+        ],
+        [
+          29,
+          371
+        ]
+      ]
+    },
+    "smoothed_3s": {
+      "accuracy": 0.95625,
+      "f1": 0.9555273189326556,
+      "auc": 0.9670749999999999,
+      "false_alarm_rate": 0.0275,
+      "recall": 0.94,
+      "confusion_matrix": [
+        [
+          389,
+          11
+        ],
+        [
+          24,
+          376
+        ]
+      ]
+    }
+  },
+  "notes": "Global train-stat scaling only; no per-domain normalization; RMAL-CRNN architecture unchanged."
+}

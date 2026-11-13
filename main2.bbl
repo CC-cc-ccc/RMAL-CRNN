@@ -1,0 +1,239 @@
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Antoni(2009)]{antoni2009cyclostationarity}
+J{\'e}r\^ome Antoni.
+\newblock Cyclostationarity by examples.
+\newblock \emph{Mechanical Systems and Signal Processing}, 23\penalty0
+  (4):\penalty0 987--1036, 2009.
+\newblock \doi{10.1016/j.ymssp.2008.10.010}.
+
+\bibitem[Bai et~al.(2018)Bai, Kolter, and Koltun]{bai2018tcn}
+Shaojie Bai, J.~Zico Kolter, and Vladlen Koltun.
+\newblock An empirical evaluation of generic convolutional and recurrent
+  networks for sequence modeling.
+\newblock \emph{arXiv preprint arXiv:1803.01271}, 2018.
+
+\bibitem[Bresciani et~al.(2023)Bresciani, Maillard, and
+  de~Santana]{bresciani2023scintillation}
+Andrea P.~C. Bresciani, Julien Maillard, and Leandro~D. de~Santana.
+\newblock Physics-based scintillations for outdoor sound auralization.
+\newblock \emph{Journal of the Acoustical Society of America}, 154\penalty0
+  (2):\penalty0 1179--1190, 2023.
+\newblock \doi{10.1121/10.0020666}.
+
+\bibitem[Bronstein et~al.(2017)Bronstein, Bruna, LeCun, Szlam, and
+  Vandergheynst]{bronstein2017gdl}
+Michael~M. Bronstein, Joan Bruna, Yann LeCun, Arthur Szlam, and Pierre
+  Vandergheynst.
+\newblock Geometric deep learning: Going beyond euclidean data.
+\newblock \emph{IEEE Signal Processing Magazine}, 34\penalty0 (4):\penalty0
+  18--42, 2017.
+
+\bibitem[Cakir et~al.(2017)Cakir, Parascandolo, Heittola, Huttunen, and
+  Virtanen]{cakir2017crnn}
+Emre Cakir, Giambattista Parascandolo, Toni Heittola, Heikki Huttunen, and
+  Tuomas Virtanen.
+\newblock Convolutional recurrent neural networks for polyphonic sound event
+  detection.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 25\penalty0 (6):\penalty0 1291--1303, 2017.
+
+\bibitem[Chakraborty et~al.(2022)Chakraborty, Bouza, Manton, and
+  Vemuri]{chakraborty2022manifoldnet}
+Rudrasis Chakraborty, Jose Bouza, Jonathan~H. Manton, and Baba~C. Vemuri.
+\newblock Manifoldnet: A deep neural network for manifold-valued data with
+  applications.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 44\penalty0 (2):\penalty0 799--810, 2022.
+\newblock \doi{10.1109/TPAMI.2020.3003846}.
+
+\bibitem[Diao et~al.(2022)Diao, Zhang, Zhao, and Khamis]{diao2022drone}
+Yufeng Diao, Yichi Zhang, Guodong Zhao, and Mohamed Khamis.
+\newblock Drone authentication via acoustic fingerprint.
+\newblock In \emph{Proceedings of the 38th Annual Computer Security
+  Applications Conference}, pp.\  658--668. ACM, 2022.
+\newblock \doi{10.1145/3564625.3564653}.
+\newblock URL \url{https://doi.org/10.1145/3564625.3564653}.
+
+\bibitem[Elhamifar \& Vidal(2013)Elhamifar and Vidal]{elhamifar2013ssc}
+Ehsan Elhamifar and Rene Vidal.
+\newblock Sparse subspace clustering: Algorithm, theory, and applications.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 35\penalty0 (11):\penalty0 2765--2781, 2013.
+
+\bibitem[Fang et~al.(2022)Fang, Finn, Wyber, and Brinkworth]{fang2022uav}
+Jian Fang, Anthony Finn, Ron Wyber, and Russell S.~A. Brinkworth.
+\newblock Acoustic detection of unmanned aerial vehicles using biologically
+  inspired vision processing.
+\newblock \emph{Journal of the Acoustical Society of America}, 151\penalty0
+  (2):\penalty0 968--981, 2022.
+\newblock \doi{10.1121/10.0009350}.
+
+\bibitem[Fawaz et~al.(2020)Fawaz, Lucas, Forestier, Pelletier, Schmidt, Weber,
+  Webb, Idoumghar, Muller, and Petitjean]{fawaz2020inceptiontime}
+Hassan~Ismail Fawaz, Benjamin Lucas, Germain Forestier, Charlotte Pelletier,
+  Daniel~F. Schmidt, Jonathan Weber, Geoffrey~I. Webb, Lhassane Idoumghar,
+  Pierre-Alain Muller, and Fran\c{c}ois Petitjean.
+\newblock Inceptiontime: Finding alexnet for time series classification.
+\newblock \emph{Data Mining and Knowledge Discovery}, 34:\penalty0 1936--1962,
+  2020.
+\newblock \doi{10.1007/s10618-020-00710-y}.
+
+\bibitem[Gong et~al.(2021)Gong, Chung, and Glass]{gong2021ast}
+Yuan Gong, Yu-An Chung, and James Glass.
+\newblock Ast: Audio spectrogram transformer.
+\newblock In \emph{Interspeech}, pp.\  571--575, 2021.
+
+\bibitem[Graves \& Schmidhuber(2005)Graves and Schmidhuber]{graves2005bilstm}
+Alex Graves and Juergen Schmidhuber.
+\newblock Framewise phoneme classification with bidirectional lstm and other
+  neural network architectures.
+\newblock In \emph{2005 IEEE International Joint Conference on Neural
+  Networks}, volume~4, pp.\  2048--2053, 2005.
+\newblock \doi{10.1109/IJCNN.2005.1556215}.
+
+\bibitem[Hou et~al.(2024)Hou, Kang, Mitchell, Wang, Kang, and
+  Botteldooren]{hou2024cooperative}
+Yuanbo Hou, Bo~Kang, Andrew Mitchell, Wenwu Wang, Jian Kang, and Dick
+  Botteldooren.
+\newblock Cooperative scene-event modelling for acoustic scene classification.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 32:\penalty0 68--82, 2024.
+\newblock \doi{10.1109/TASLP.2023.3323135}.
+
+\bibitem[Hu et~al.(2020)Hu, Shen, Albanie, Sun, and Wu]{hu2020senet}
+Jie Hu, Li~Shen, Samuel Albanie, Gang Sun, and Enhua Wu.
+\newblock Squeeze-and-excitation networks.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 42\penalty0 (8):\penalty0 2011--2023, 2020.
+
+\bibitem[Huang \& Van~Gool(2017)Huang and Van~Gool]{huang2017spdnet}
+Zhiwu Huang and Luc Van~Gool.
+\newblock A riemannian network for spd matrix learning.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~31, pp.\  2036--2042, 2017.
+
+\bibitem[Ji et~al.(2017)Ji, Zhang, Li, Salzmann, and Reid]{ji2017dsc}
+Pan Ji, Tong Zhang, Hongdong Li, Mathieu Salzmann, and Ian Reid.
+\newblock Deep subspace clustering networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2017.
+
+\bibitem[Jung \& Kim(2026)Jung and Kim]{jung2026mambasl}
+Yoo-Min Jung and Leekyung Kim.
+\newblock {MambaSL}: Exploring single-layer mamba for time series
+  classification.
+\newblock In \emph{The Fourteenth International Conference on Learning
+  Representations}, 2026.
+\newblock URL \url{https://openreview.net/forum?id=YDl4vqQqGP}.
+
+\bibitem[Kim et~al.(2021)Kim, Papamakarios, and Mnih]{kim2021lipschitz}
+Hyunjik Kim, George Papamakarios, and Andriy Mnih.
+\newblock The lipschitz constant of self-attention.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  5562--5571, 2021.
+
+\bibitem[Kong et~al.(2020)Kong, Cao, Iqbal, Wang, Wang, and
+  Plumbley]{kong2020panns}
+Qiuqiang Kong, Yin Cao, Turab Iqbal, Yuxuan Wang, Wenwu Wang, and Mark~D.
+  Plumbley.
+\newblock Panns: Large-scale pretrained audio neural networks for audio pattern
+  recognition.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 28:\penalty0 2880--2894, 2020.
+
+\bibitem[Lange et~al.(1989)Lange, Little, and Taylor]{lange1989student}
+Kenneth~L. Lange, Roderick J.~A. Little, and Jeremy M.~G. Taylor.
+\newblock Robust statistical modeling using the t distribution.
+\newblock \emph{Journal of the American Statistical Association}, 84\penalty0
+  (408):\penalty0 881--896, 1989.
+
+\bibitem[Liu et~al.(2013)Liu, Lin, Yan, Sun, Yu, and Ma]{liu2013lrr}
+Guangcan Liu, Zhouchen Lin, Shuicheng Yan, Ju~Sun, Yong Yu, and Yi~Ma.
+\newblock Robust recovery of subspace structures by low-rank representation.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 35\penalty0 (1):\penalty0 171--184, 2013.
+
+\bibitem[Mi{\k{e}}sikowska(2023)]{miesikowska2023uavdataset}
+Marzena Mi{\k{e}}sikowska.
+\newblock Dataset of acoustic signals of unmanned aerial vehicles and speech
+  obtained in external environmental conditions, 2023.
+\newblock URL \url{https://zenodo.org/records/15190811}.
+
+\bibitem[Pan et~al.(2022)Pan, Chou, and Wei]{pan2022matt}
+Yue-Ting Pan, Jing-Lun Chou, and Chun-Shu Wei.
+\newblock {MAtt}: A manifold attention network for {EEG} decoding.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~35, pp.\  31116--31129, 2022.
+\newblock URL
+  \url{https://papers.neurips.cc/paper_files/paper/2022/hash/c981fd12b1d5703f19bd8289da9fc996-Abstract-Conference.html}.
+
+\bibitem[Roweis \& Saul(2000)Roweis and Saul]{roweis2000lle}
+Sam~T. Roweis and Lawrence~K. Saul.
+\newblock Nonlinear dimensionality reduction by locally linear embedding.
+\newblock \emph{Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000.
+
+\bibitem[Tan et~al.(2024)Tan, Ai, Li, and Plumbley]{tan2024disentanglement}
+Yizhou Tan, Haojun Ai, Shengchen Li, and Mark~D. Plumbley.
+\newblock Acoustic scene classification across cities and devices via feature
+  disentanglement.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 32:\penalty0 1286--1297, 2024.
+\newblock \doi{10.1109/TASLP.2024.3353578}.
+
+\bibitem[Tenenbaum et~al.(2000)Tenenbaum, de~Silva, and
+  Langford]{tenenbaum2000isomap}
+Joshua~B. Tenenbaum, Vin de~Silva, and John~C. Langford.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock \emph{Science}, 290\penalty0 (5500):\penalty0 2319--2323, 2000.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar,
+  et~al.]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, et~al.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2017.
+
+\bibitem[Veli\v{c}kovi\'c et~al.(2018)Veli\v{c}kovi\'c, Cucurull, Casanova,
+  Romero, Li\`o, and Bengio]{velickovic2018gat}
+Petar Veli\v{c}kovi\'c, Guillem Cucurull, Arantxa Casanova, Adriana Romero,
+  Pietro Li\`o, and Yoshua Bengio.
+\newblock Graph attention networks.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
+
+\bibitem[Vidal(2011)]{vidal2011subspace}
+Rene Vidal.
+\newblock Subspace clustering.
+\newblock \emph{IEEE Signal Processing Magazine}, 28\penalty0 (2):\penalty0
+  52--68, 2011.
+
+\bibitem[Wang et~al.(2025)Wang, Li, Shi, Ye, Mo, Lin, Ju, Chu, and
+  Jin]{wang2025timemixerpp}
+Shiyu Wang, Jiawei Li, Xiaoming Shi, Zhou Ye, Baichuan Mo, Wenze Lin, Shengtong
+  Ju, Zhixuan Chu, and Ming Jin.
+\newblock Timemixer++: A general time series pattern machine for universal
+  predictive analysis.
+\newblock In \emph{International Conference on Learning Representations}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2410.16032}.
+
+\bibitem[Yang \& Li(2024)Yang and Li]{yang2024spatial}
+Bing Yang and Xiaofei Li.
+\newblock Self-supervised learning of spatial acoustic representation with
+  cross-channel signal reconstruction and multi-channel conformer.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 32:\penalty0 4211--4225, 2024.
+\newblock \doi{10.1109/TASLP.2024.3458811}.
+
+\bibitem[{Ze Feng (Ted) Gan} et~al.(2025){Ze Feng (Ted) Gan}, Valente,
+  Brentner, and Greenwood]{gan2025modulation}
+{Ze Feng (Ted) Gan}, Vitor~Tumelero Valente, Kenneth~S. Brentner, and Eric
+  Greenwood.
+\newblock Broadband noise modulation of multirotor aircraft.
+\newblock \emph{Journal of the Acoustical Society of America}, 157\penalty0
+  (2):\penalty0 924--939, 2025.
+\newblock \doi{10.1121/10.0035646}.
+
+\end{thebibliography}

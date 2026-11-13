@@ -1,0 +1,205 @@
+This appendix gives the proofs supporting the geometric interpretation and structural analysis in the main paper. It establishes a directional relation for the GST projection before normalization and bias, the concentration envelope of tangent-metric attention, and the factorized proximal structure of the temporal affinity.
+\section{Blockwise Directional Equivalence on a Product of Spheres}
+\label{app:blockwise}
+\textbf{Proposition S.1:} Let \(K\geq1\) and \(d\geq2\). For every domain \(k\), assume \(\|\overline{\mathbf p}_k\|_2\geq\epsilon\) and let the gated vector in~\eqref{eq:domain-alignment} satisfy \(\mathbf h_t^{(k)}\neq\mathbf0\), and define
+\label{prop:block-direction}
+\begin{align}
+\boldsymbol{\upsilon}_t^{(k)}
+&=\frac{\mathbf h_t^{(k)}}{\|\mathbf h_t^{(k)}\|_2},
+&\theta_{t,k}
+&=\arccos\!\left((\boldsymbol{\upsilon}_t^{(k)})^\top\mathbf p_k\right),\nonumber\\
+\mathbf u_t^{(k)}
+&=\Pi_{\mathbf p_k}\mathbf h_t^{(k)},
+&\omega_{t,k}
+&=\frac{\theta_{t,k}}
+{\|\mathbf h_t^{(k)}\|_2\sin\theta_{t,k}}.
+\label{eq:app-block-definitions}
+\end{align}
+Assume \(\theta_{t,k}\in(0,\pi)\) for all \(k\). On the product manifold
+\(\mathcal P=(\Sph^{d-1})^K\), stack the base points, normalized aligned vectors, and tangent components as \(\mathbf p=(\mathbf p_1,\ldots,\mathbf p_K)\), \(\boldsymbol{\upsilon}_t=(\boldsymbol{\upsilon}_t^{(1)},\ldots,\boldsymbol{\upsilon}_t^{(K)})\), and \(\mathbf u_t=[(\mathbf u_t^{(1)})^\top,\ldots,(\mathbf u_t^{(K)})^\top]^\top\in\R^{Kd}\). Then
+\begin{equation}
+\operatorname{Log}_{\mathbf p}(\boldsymbol{\upsilon}_t)
+=\boldsymbol{\Omega}_t\mathbf u_t,
+\qquad
+\boldsymbol{\Omega}_t
+=\operatorname{blkdiag}_{k=1}^{K}(\omega_{t,k}\mathbf I_d)\succ\mathbf0.
+\label{eq:app-log}
+\end{equation}
+Hence each pre-normalization projected block is collinear with, and points in the same direction as, the corresponding spherical logarithmic map. The result characterizes the projected direction. With the implemented bias, \(\mathbf z_t^{(k)}-\mathbf b_k\in\Tangent_{\mathbf p_k}\Sph^{d-1}\), so the final token lies in the corresponding affine tangent space.
+
+\emph{Proof:} The product-manifold logarithmic map is the concatenation of its component maps. For domain \(k\), the logarithmic map on \(\Sph^{d-1}\) is
+\begin{equation}
+\log_{\mathbf p_k}(\boldsymbol{\upsilon}_t^{(k)})
+=\frac{\theta_{t,k}}{\sin\theta_{t,k}}
+\left(\boldsymbol{\upsilon}_t^{(k)}
+-\cos\theta_{t,k}\,\mathbf p_k\right).
+\label{eq:app-log-map}
+\end{equation}
+Because
+\(\cos\theta_{t,k}=(\mathbf h_t^{(k)})^\top\mathbf p_k/
+\|\mathbf h_t^{(k)}\|_2\),
+\begin{equation}
+\boldsymbol{\upsilon}_t^{(k)}
+-\cos\theta_{t,k}\,\mathbf p_k
+=\frac{\Pi_{\mathbf p_k}\mathbf h_t^{(k)}}
+{\|\mathbf h_t^{(k)}\|_2}
+=\frac{\mathbf u_t^{(k)}}{\|\mathbf h_t^{(k)}\|_2}.
+\label{eq:app-tangent}
+\end{equation}
+Substitution into~\eqref{eq:app-log-map} gives
+\(\log_{\mathbf p_k}(\boldsymbol{\upsilon}_t^{(k)})
+=\omega_{t,k}\mathbf u_t^{(k)}\). Stacking the \(K\) identities yields~\eqref{eq:app-log}. Since every \(\omega_{t,k}>0\), the direction of each nonzero block is preserved. At \(\theta_{t,k}=0\), both component vectors vanish and no direction is defined; at \(\theta_{t,k}=\pi\), the component logarithmic map is not unique.
+
+The directional agreement follows because both constructions use the same orthogonal component \(\Pi_{\mathbf p_k}\mathbf h_t^{(k)}\), and spherical curvature multiplies it by a positive blockwise scale. Normalization preserves the direction of each nonzero component and controls its norm by \(\sqrt d\). The learned bias then translates the tangent representation, as specified in~\eqref{eq:token}.
+
+\section{Concentration Analysis of Tangent-Metric Attention}
+\label{app:attention-proof}
+\textbf{Proposition S.2:} For head \(h\), let \(\|\mathbf p_h\|_2\leq1\) as ensured by the implemented normalization, and define
+\label{prop:attention-concentration}
+\begin{equation}
+D_{\max}^{h}
+=\max_{1\leq i,j\leq K}\|\mathbf q_i^h-\mathbf k_j^h\|_2^2
+\leq4.
+\label{eq:app-diameter}
+\end{equation}
+Then the logits and weights in~\eqref{eq:attention-logit}--\eqref{eq:attention-weight} satisfy
+\begin{align}
+-\gamma_hD_{\max}^{h}
+&\leq \ell_{ij}^{h}\leq0,
+\label{eq:app-logit-bound}\\
+\max_j a_{ij}^{h}
+&\leq\frac{1}{1+(K-1)e^{-\gamma_hD_{\max}^{h}}},
+\label{eq:app-weight-bound}\\
+\mathsf H(\mathbf a_{i,\cdot}^{h})
+&\geq\log\!\left(
+1+(K-1)e^{-\gamma_hD_{\max}^{h}}
+\right).
+\label{eq:app-entropy-bound}
+\end{align}
+
+\emph{Proof:} By~\eqref{eq:qkv},
+\(\|\bar{\mathbf q}_i^h\|_2\leq1\) and
+\(\|\bar{\mathbf k}_j^h\|_2\leq1\). The operator \(\mathbf I-\mathbf p_h\mathbf p_h^\top\) has spectral norm at most one for \(\|\mathbf p_h\|_2\leq1\), so
+\(\|\mathbf q_i^h\|_2\leq1\) and
+\(\|\mathbf k_j^h\|_2\leq1\). The triangle inequality gives
+\(\|\mathbf q_i^h-\mathbf k_j^h\|_2\leq2\), proving~\eqref{eq:app-diameter};~\eqref{eq:app-logit-bound} then follows from \(\gamma_h>0\).
+
+Let \(j^\star=\argmax_j \ell_{ij}^{h}\). The softmax can be written as
+\begin{equation}
+\max_j a_{ij}^{h}
+=\frac{1}{1+
+\sum_{m\neq j^\star}
+e^{\ell_{im}^{h}-\ell_{ij^\star}^{h}}}.
+\label{eq:app-softmax}
+\end{equation}
+The logit interval implies
+\(\ell_{im}^{h}-\ell_{ij^\star}^{h}\geq-\gamma_hD_{\max}^{h}\). Lower-bounding every term in the denominator proves~\eqref{eq:app-weight-bound}. Finally, for any discrete distribution \(\mathbf a\),
+\(\mathsf H(\mathbf a)\geq-\log\max_j a_j\), which gives~\eqref{eq:app-entropy-bound}.
+
+For finite \(\gamma_h\) and \(K>1\), the peak-weight bound is strictly below one and the entropy bound is positive. The proposition therefore gives an explicit concentration envelope for tangent-metric attention at a finite inverse bandwidth. On the unit-normalization branch, the head-specific operator is a rank-\((d_h-1)\) orthogonal projector, selecting complementary tangent directions for cross-domain relations.
+
+\section{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}
+\label{app:affinity}
+Let \(\mathbf F\in\R^{T\times d_f}\),
+\(\mathbf W_u,\mathbf W_v\in\R^{r_\ell\times d_f}\), and define
+\begin{alignat}{2}
+\mathbf U
+&=\mathbf F\mathbf W_u^\top
+&\qquad&\in\R^{T\times r_\ell},
+\label{eq:app-u}\\
+\mathbf V
+&=\mathbf F\mathbf W_v^\top
+&&\in\R^{T\times r_\ell},
+\label{eq:app-v}\\
+\mathbf C_{\mathrm{raw}}
+&=\frac{1}{\sqrt{r_\ell}}\mathbf U\mathbf V^\top
+&&\in\R^{T\times T},
+\label{eq:app-craw}\\
+\mathbf C
+&=\ReLU\!\left(
+\mathbf C_{\mathrm{raw}}-\vartheta\mathbf1_T\mathbf1_T^\top
+\right)
+&&\in\R^{T\times T}.
+\label{eq:app-c}
+\end{alignat}
+
+\textbf{Proposition S.3.1:} The pre-threshold affinity satisfies
+\begin{equation}
+\rank(\mathbf C_{\mathrm{raw}})\leq r_\ell,
+\label{eq:app-rank}
+\end{equation}
+independent of \(T\).
+
+\emph{Proof:} Since \(\mathbf U,\mathbf V\in\R^{T\times r_\ell}\),
+\begin{equation*}
+\rank(\mathbf U\mathbf V^\top)
+\leq\min\{\rank(\mathbf U),\rank(\mathbf V)\}
+\leq r_\ell.
+\end{equation*}
+Multiplication by \(1/\sqrt{r_\ell}\) preserves rank, and the bound is attained when both factors have full column rank. The elementwise threshold in~\eqref{eq:app-c} can increase matrix rank, so Proposition~S.3.1 applies only to the raw affinity. The proposition characterizes the compact pre-threshold relation, while Propositions~S.3.2--S.3.3 characterize the nonnegative sparse support and residual aggregation used by the network. Asymmetric entries encode directional temporal dependence, and diagonal entries retain frame self-information.
+
+\textbf{Proposition S.3.2:} Let
+\(g_{\vartheta}(\mathbf G)=\vartheta\|\mathbf G\|_1+\iota_{\geq0}(\mathbf G)\), where \(\|\cdot\|_1\) sums entrywise absolute values and \(\iota_{\geq0}\) is zero on the nonnegative orthant and \(+\infty\) elsewhere. Then
+\begin{align}
+\mathbf C
+&=\argmin_{\mathbf G\geq0}
+\frac{1}{2}\|\mathbf G-\mathbf C_{\mathrm{raw}}\|_F^2
++\vartheta\|\mathbf G\|_1,
+\label{eq:app-prox-problem}\\
+\mathbf C&=\prox_{g_{\vartheta}}(\mathbf C_{\mathrm{raw}}),
+\label{eq:app-prox}
+\end{align}
+at fixed \(\mathbf C_{\mathrm{raw}}\), with
+\begin{equation}
+\vartheta_2>\vartheta_1
+\ \Longrightarrow\
+\operatorname{supp}(\mathbf C_{\vartheta_2})
+\subseteq\operatorname{supp}(\mathbf C_{\vartheta_1}).
+\label{eq:app-support}
+\end{equation}
+
+\emph{Proof:} The objective is separable. For one entry \(x=C_{\mathrm{raw},ts}\), solve
+\begin{equation*}
+\min_{g\geq0}\ \frac12(g-x)^2+\vartheta g.
+\end{equation*}
+Strict convexity gives the unique solution
+\(g^\star=\max\{x-\vartheta,0\}\). Applying this result entry-wise proves~\eqref{eq:app-prox-problem}--\eqref{eq:app-prox}. Since \(C_{ts}>0\) exactly when \(C_{\mathrm{raw},ts}>\vartheta\), increasing \(\vartheta\) can only remove support.
+
+\textbf{Proposition S.3.3:} Let the aggregated column vector be
+\(\mathbf m_t=(\mathbf C\mathbf F)_{t,:}^{\top}
+=\sum_{s=1}^{T}C_{ts}\mathbf f_s\) and
+\begin{equation*}
+\LN(\mathbf m_t)
+=\boldsymbol{\psi}_{\mathrm{LN}}\odot\hat{\mathbf m}_t
++\mathbf b_{\mathrm{LN}},
+\qquad
+\|\hat{\mathbf m}_t\|_2\leq\sqrt{d_f}.
+\end{equation*}
+Here \(\hat{\mathbf m}_t\) is the centered, variance-normalized vector, and \(\boldsymbol\psi_{\mathrm{LN}}\) and \(\mathbf b_{\mathrm{LN}}\) are the learned gain and bias. For finite LayerNorm parameters, define
+\begin{equation*}
+G_{\mathrm{LN}}
+=\|\boldsymbol{\psi}_{\mathrm{LN}}\|_\infty\sqrt{d_f}
++\|\mathbf b_{\mathrm{LN}}\|_2.
+\end{equation*}
+Then the output in~\eqref{eq:fnsar-output} satisfies
+\begin{equation}
+\|\mathbf f_t^{\mathrm{out}}\|_2
+\leq(1-\zeta)\|\mathbf f_t\|_2+\zeta G_{\mathrm{LN}},
+\label{eq:app-norm-bound}
+\end{equation}
+independent of the scale of \(\mathbf C\).
+
+\emph{Proof:} The LayerNorm bound follows from
+\begin{equation*}
+\|\LN(\mathbf m_t)\|_2
+\leq\|\boldsymbol{\psi}_{\mathrm{LN}}\|_\infty
+\|\hat{\mathbf m}_t\|_2+\|\mathbf b_{\mathrm{LN}}\|_2
+\leq G_{\mathrm{LN}}.
+\end{equation*}
+Applying the triangle inequality to~\eqref{eq:fnsar-output} gives
+\begin{equation*}
+\|\mathbf f_t^{\mathrm{out}}\|_2
+\leq(1-\zeta)\|\mathbf f_t\|_2
++\zeta\|\LN(\mathbf m_t)\|_2,
+\end{equation*}
+and~\eqref{eq:app-norm-bound} follows. This establishes the LayerNorm-residual bound used by the temporal refinement.

@@ -1,0 +1,187 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{cakir2017crnn,kong2020panns,gong2021ast}
+\citation{hou2024cooperative,yang2024spatial,tan2024disentanglement}
+\citation{lange1989student}
+\citation{roweis2000lle,tenenbaum2000isomap,vidal2011subspace}
+\citation{bronstein2017gdl,chakraborty2022manifoldnet}
+\citation{vaswani2017attention,velickovic2018gat,ji2017dsc}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{cakir2017crnn,kong2020panns,gong2021ast}
+\citation{hou2024cooperative,yang2024spatial,tan2024disentanglement}
+\citation{roweis2000lle,tenenbaum2000isomap,elhamifar2013ssc,liu2013lrr}
+\citation{bronstein2017gdl,chakraborty2022manifoldnet}
+\citation{vaswani2017attention}
+\citation{velickovic2018gat,ji2017dsc}
+\citation{kim2021lipschitz}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Acoustic representation learning.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Geometry and robust subspaces.}{2}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Structured attention and affinity.}{2}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Reliability-Conditioned Product-Tangent Learning}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Setup}{2}{subsection.3.1}\protected@file@percent }
+\newlabel{eq:domain-feature}{{1}{2}{Problem Setup}{equation.1}{}}
+\citation{lange1989student}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Ordered RMAL-CRNN path. Coordinate reliability precedes domain-specific tangent projection and cross-domain relation learning. The fused frame sequence then parameterizes learned factors for temporal affinity refinement.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:framework}{{1}{3}{Ordered RMAL-CRNN path. Coordinate reliability precedes domain-specific tangent projection and cross-domain relation learning. The fused frame sequence then parameterizes learned factors for temporal affinity refinement}{figure.1}{}}
+\newlabel{eq:tangent-space}{{2}{3}{Problem Setup}{equation.2}{}}
+\newlabel{eq:product-space}{{3}{3}{Problem Setup}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Ordered Representation Path}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Geometric Student-t Tangent-Subspace Projection (GST)}{3}{subsection.3.3}\protected@file@percent }
+\newlabel{eq:gst-gate}{{4}{4}{Geometric Student-t Tangent-Subspace Projection (GST)}{equation.4}{}}
+\newlabel{eq:domain-alignment}{{5}{4}{Geometric Student-t Tangent-Subspace Projection (GST)}{equation.5}{}}
+\newlabel{eq:domain-basepoint}{{6}{4}{Geometric Student-t Tangent-Subspace Projection (GST)}{equation.6}{}}
+\newlabel{eq:tangent-projection}{{7}{4}{Geometric Student-t Tangent-Subspace Projection (GST)}{equation.7}{}}
+\newlabel{eq:token}{{8}{4}{Geometric Student-t Tangent-Subspace Projection (GST)}{equation.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Learned Manifold Attention (LMA) with Tangent Metrics}{4}{subsection.3.4}\protected@file@percent }
+\newlabel{eq:qkv}{{9}{4}{Learned Manifold Attention (LMA) with Tangent Metrics}{equation.9}{}}
+\newlabel{eq:attention-logit}{{10}{4}{Learned Manifold Attention (LMA) with Tangent Metrics}{equation.10}{}}
+\newlabel{eq:attention-weight}{{11}{4}{Learned Manifold Attention (LMA) with Tangent Metrics}{equation.11}{}}
+\newlabel{eq:attention-output}{{12}{4}{Learned Manifold Attention (LMA) with Tangent Metrics}{equation.12}{}}
+\citation{vaswani2017attention}
+\citation{elhamifar2013ssc,liu2013lrr,ji2017dsc}
+\newlabel{eq:head-geometry}{{13}{5}{Learned Manifold Attention (LMA) with Tangent Metrics}{equation.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Factorized Nonnegative Sparse Affinity Refinement (FNSAR)}{5}{subsection.3.5}\protected@file@percent }
+\newlabel{eq:fnsar-affinity}{{14}{5}{Factorized Nonnegative Sparse Affinity Refinement (FNSAR)}{equation.14}{}}
+\newlabel{eq:fnsar-output}{{15}{5}{Factorized Nonnegative Sparse Affinity Refinement (FNSAR)}{equation.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Training and Cost}{5}{subsection.3.6}\protected@file@percent }
+\newlabel{eq:objective}{{16}{5}{Training and Cost}{equation.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{5}{section.4}\protected@file@percent }
+\citation{miesikowska2023uavdataset}
+\citation{diao2022drone}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Controlled mechanism diagnostics assembled from separately extracted vector panels. (a) GST reliability across descriptor domains versus impulse intensity. (b) Tangent-metric LMA logits and an unnormalized dot-product control at SIR $=-3$ dB. (c) Top-$8$ spectral-energy fraction before and after FNSAR.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:mechanisms}{{2}{6}{Controlled mechanism diagnostics assembled from separately extracted vector panels. (a) GST reliability across descriptor domains versus impulse intensity. (b) Tangent-metric LMA logits and an unnormalized dot-product control at SIR $=-3$ dB. (c) Top-$8$ spectral-energy fraction before and after FNSAR}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Protocol}{6}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Q1: Controlled Mechanism Tests}{6}{subsection.4.2}\protected@file@percent }
+\citation{pan2022matt}
+\citation{fawaz2020inceptiontime}
+\citation{vaswani2017attention}
+\citation{cakir2017crnn}
+\citation{hu2020senet}
+\citation{bai2018tcn}
+\citation{wang2025timemixerpp}
+\citation{jung2026mambasl}
+\citation{diao2022drone}
+\citation{pan2022matt}
+\citation{fawaz2020inceptiontime}
+\citation{vaswani2017attention}
+\citation{cakir2017crnn}
+\citation{hu2020senet}
+\citation{huang2017spdnet}
+\citation{bai2018tcn}
+\citation{graves2005bilstm}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces UMAP diagnostics under compound degradation. Top: clean, corrupted, and RMAL-CRNN sample embeddings. Bottom: clean, corrupted, and reliability-conditioned product-tangent descriptor embeddings.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:compound-geometry}{{3}{7}{UMAP diagnostics under compound degradation. Top: clean, corrupted, and RMAL-CRNN sample embeddings. Bottom: clean, corrupted, and reliability-conditioned product-tangent descriptor embeddings}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Q2: Robust Classification}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Q3: Component Necessity}{7}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Accuracy across SNRs (\%, mean $\pm $ sample standard deviation) on the ten-class Kielce UAV-model benchmark (a) and the eight-class Glasgow/ACSAC~2022 acoustic-identity benchmark (b).}}{8}{table.1}\protected@file@percent }
+\newlabel{tab:comparison}{{1}{8}{Accuracy across SNRs (\%, mean $\pm $ sample standard deviation) on the ten-class Kielce UAV-model benchmark (a) and the eight-class Glasgow/ACSAC~2022 acoustic-identity benchmark (b)}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Confusion matrices at $0$ dB: (a) HHT, (b) LOFAR, (c) FFT, (d) WPT, (e) HHSA, (f) MFCC, (g) descriptor concatenation, and (h) RMAL-CRNN. Cell entries are counts; right-margin percentages are row-wise precision for each predicted class.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:confusion}{{4}{8}{Confusion matrices at $0$ dB: (a) HHT, (b) LOFAR, (c) FFT, (d) WPT, (e) HHSA, (f) MFCC, (g) descriptor concatenation, and (h) RMAL-CRNN. Cell entries are counts; right-margin percentages are row-wise precision for each predicted class}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Scope and Future Work}{8}{section.5}\protected@file@percent }
+\bibdata{references}
+\bibcite{antoni2009cyclostationarity}{{1}{2009}{{Antoni}}{{}}}
+\bibcite{bai2018tcn}{{2}{2018}{{Bai et~al.}}{{Bai, Kolter, and Koltun}}}
+\bibcite{bresciani2023scintillation}{{3}{2023}{{Bresciani et~al.}}{{Bresciani, Maillard, and de~Santana}}}
+\bibcite{bronstein2017gdl}{{4}{2017}{{Bronstein et~al.}}{{Bronstein, Bruna, LeCun, Szlam, and Vandergheynst}}}
+\bibcite{cakir2017crnn}{{5}{2017}{{Cakir et~al.}}{{Cakir, Parascandolo, Heittola, Huttunen, and Virtanen}}}
+\bibcite{chakraborty2022manifoldnet}{{6}{2022}{{Chakraborty et~al.}}{{Chakraborty, Bouza, Manton, and Vemuri}}}
+\bibcite{diao2022drone}{{7}{2022}{{Diao et~al.}}{{Diao, Zhang, Zhao, and Khamis}}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Structural ablations at $0$ dB (\%, mean $\pm $ standard deviation).}}{9}{table.2}\protected@file@percent }
+\newlabel{tab:ablation}{{2}{9}{Structural ablations at $0$ dB (\%, mean $\pm $ standard deviation)}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}\protected@file@percent }
+\bibcite{elhamifar2013ssc}{{8}{2013}{{Elhamifar \& Vidal}}{{Elhamifar and Vidal}}}
+\bibcite{fang2022uav}{{9}{2022}{{Fang et~al.}}{{Fang, Finn, Wyber, and Brinkworth}}}
+\bibcite{fawaz2020inceptiontime}{{10}{2020}{{Fawaz et~al.}}{{Fawaz, Lucas, Forestier, Pelletier, Schmidt, Weber, Webb, Idoumghar, Muller, and Petitjean}}}
+\bibcite{gong2021ast}{{11}{2021}{{Gong et~al.}}{{Gong, Chung, and Glass}}}
+\bibcite{graves2005bilstm}{{12}{2005}{{Graves \& Schmidhuber}}{{Graves and Schmidhuber}}}
+\bibcite{hou2024cooperative}{{13}{2024}{{Hou et~al.}}{{Hou, Kang, Mitchell, Wang, Kang, and Botteldooren}}}
+\bibcite{hu2020senet}{{14}{2020}{{Hu et~al.}}{{Hu, Shen, Albanie, Sun, and Wu}}}
+\bibcite{huang2017spdnet}{{15}{2017}{{Huang \& Van~Gool}}{{Huang and Van~Gool}}}
+\bibcite{ji2017dsc}{{16}{2017}{{Ji et~al.}}{{Ji, Zhang, Li, Salzmann, and Reid}}}
+\bibcite{jung2026mambasl}{{17}{2026}{{Jung \& Kim}}{{Jung and Kim}}}
+\bibcite{kim2021lipschitz}{{18}{2021}{{Kim et~al.}}{{Kim, Papamakarios, and Mnih}}}
+\bibcite{kong2020panns}{{19}{2020}{{Kong et~al.}}{{Kong, Cao, Iqbal, Wang, Wang, and Plumbley}}}
+\bibcite{lange1989student}{{20}{1989}{{Lange et~al.}}{{Lange, Little, and Taylor}}}
+\bibcite{liu2013lrr}{{21}{2013}{{Liu et~al.}}{{Liu, Lin, Yan, Sun, Yu, and Ma}}}
+\bibcite{miesikowska2023uavdataset}{{22}{2023}{{Mi{\k {e}}sikowska}}{{}}}
+\bibcite{pan2022matt}{{23}{2022}{{Pan et~al.}}{{Pan, Chou, and Wei}}}
+\bibcite{roweis2000lle}{{24}{2000}{{Roweis \& Saul}}{{Roweis and Saul}}}
+\bibcite{tan2024disentanglement}{{25}{2024}{{Tan et~al.}}{{Tan, Ai, Li, and Plumbley}}}
+\bibcite{tenenbaum2000isomap}{{26}{2000}{{Tenenbaum et~al.}}{{Tenenbaum, de~Silva, and Langford}}}
+\bibcite{vaswani2017attention}{{27}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, et~al.}}}
+\bibcite{velickovic2018gat}{{28}{2018}{{Veli\v {c}kovi\'c et~al.}}{{Veli\v {c}kovi\'c, Cucurull, Casanova, Romero, Li\`o, and Bengio}}}
+\bibcite{vidal2011subspace}{{29}{2011}{{Vidal}}{{}}}
+\bibcite{wang2025timemixerpp}{{30}{2025}{{Wang et~al.}}{{Wang, Li, Shi, Ye, Mo, Lin, Ju, Chu, and Jin}}}
+\bibcite{yang2024spatial}{{31}{2024}{{Yang \& Li}}{{Yang and Li}}}
+\bibcite{gan2025modulation}{{32}{2025}{{{Ze Feng (Ted) Gan} et~al.}}{{{Ze Feng (Ted) Gan}, Valente, Brentner, and Greenwood}}}
+\bibstyle{iclr2027_conference}
+\citation{fang2022uav,gan2025modulation}
+\citation{antoni2009cyclostationarity}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Experimental and Implementation Details}{11}{appendix.A}\protected@file@percent }
+\newlabel{app:experimental-details}{{A}{11}{Experimental and Implementation Details}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Frame and Descriptor Construction}{11}{subsection.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Controlled Source and Degradation Model}{11}{subsection.A.2}\protected@file@percent }
+\newlabel{eq:source-signal-app}{{18}{11}{Controlled Source and Degradation Model}{equation.18}{}}
+\citation{bresciani2023scintillation}
+\citation{miesikowska2023uavdataset}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ten UAV-model classes used from the Kielce acoustic dataset.}}{12}{table.3}\protected@file@percent }
+\newlabel{tab:kielce-models}{{3}{12}{Ten UAV-model classes used from the Kielce acoustic dataset}{table.3}{}}
+\newlabel{eq:degradation-app}{{19}{12}{Controlled Source and Degradation Model}{equation.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Public-Data Classes}{12}{subsection.A.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Additional Mechanism Diagnostics}{12}{appendix.B}\protected@file@percent }
+\newlabel{app:mechanism-panels}{{B}{12}{Additional Mechanism Diagnostics}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Complete Paired Statistics}{12}{appendix.C}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Paired Student $t$-tests between RMAL-CRNN and control variants at $0$ dB over the paired multi-seed runs (Holm--Bonferroni corrected). Differences use unrounded paired runs.}}{12}{table.4}\protected@file@percent }
+\newlabel{tab:paired-test-app}{{4}{12}{Paired Student $t$-tests between RMAL-CRNN and control variants at $0$ dB over the paired multi-seed runs (Holm--Bonferroni corrected). Differences use unrounded paired runs}{table.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Impulsive corruption affects the six descriptor domains unequally. Learned reliability weights change selectively, and the corrected fused representation drifts more smoothly from its clean reference than the LayerNorm control in the evaluated range.}}{13}{figure.5}\protected@file@percent }
+\newlabel{fig:impulse-app}{{5}{13}{Impulsive corruption affects the six descriptor domains unequally. Learned reliability weights change selectively, and the corrected fused representation drifts more smoothly from its clean reference than the LayerNorm control in the evaluated range}{figure.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Implementation and Sensitivity}{13}{appendix.D}\protected@file@percent }
+\newlabel{app:implementation}{{D}{13}{Implementation and Sensitivity}{appendix.D}{}}
+\citation{fawaz2020inceptiontime}
+\citation{hu2020senet}
+\citation{bai2018tcn}
+\citation{huang2017spdnet}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Tangent-metric attention under co-channel interference. The diagnostic fixes $\gamma =0.50$; normalized projected logits stay within their admissible interval, whereas the unnormalized dot-product control is scale-sensitive.}}{14}{figure.6}\protected@file@percent }
+\newlabel{fig:cochannel-app}{{6}{14}{Tangent-metric attention under co-channel interference. The diagnostic fixes $\gamma =0.50$; normalized projected logits stay within their admissible interval, whereas the unnormalized dot-product control is scale-sensitive}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Descriptor sensitivity and factorized sparse temporal-affinity behavior under additive Gaussian noise.}}{14}{figure.7}\protected@file@percent }
+\newlabel{fig:noise-app}{{7}{14}{Descriptor sensitivity and factorized sparse temporal-affinity behavior under additive Gaussian noise}{figure.7}{}}
+\citation{pan2022matt}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Trainable parameter count for the retained ten-class implementation.}}{15}{table.5}\protected@file@percent }
+\newlabel{tab:parameter-breakdown}{{5}{15}{Trainable parameter count for the retained ten-class implementation}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Sensitivity to attention heads, factor rank, fusion dimension, and the learning-rate/batch-size pair.}}{15}{figure.8}\protected@file@percent }
+\newlabel{fig:hyperparameters-app}{{8}{15}{Sensitivity to attention heads, factor rank, fusion dimension, and the learning-rate/batch-size pair}{figure.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{MAtt identity and acoustic adaptation.}{15}{section*.6}\protected@file@percent }
+\newlabel{eq:matt-adaptation}{{20}{15}{MAtt identity and acoustic adaptation}{equation.20}{}}
+\citation{wang2025timemixerpp}
+\citation{jung2026mambasl}
+\@writefile{toc}{\contentsline {paragraph}{Additional comparison records.}{16}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {E}Blockwise Directional Equivalence on a Product of Spheres}{16}{appendix.E}\protected@file@percent }
+\newlabel{app:blockwise}{{E}{16}{Blockwise Directional Equivalence on a Product of Spheres}{appendix.E}{}}
+\newlabel{prop:block-direction}{{E}{16}{Blockwise Directional Equivalence on a Product of Spheres}{appendix.E}{}}
+\newlabel{eq:app-block-definitions}{{21}{16}{Blockwise Directional Equivalence on a Product of Spheres}{equation.21}{}}
+\newlabel{eq:app-log}{{22}{16}{Blockwise Directional Equivalence on a Product of Spheres}{equation.22}{}}
+\newlabel{eq:app-log-map}{{23}{16}{Blockwise Directional Equivalence on a Product of Spheres}{equation.23}{}}
+\newlabel{eq:app-tangent}{{24}{16}{Blockwise Directional Equivalence on a Product of Spheres}{equation.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Concentration Analysis of Tangent-Metric Attention}{17}{appendix.F}\protected@file@percent }
+\newlabel{app:attention-proof}{{F}{17}{Concentration Analysis of Tangent-Metric Attention}{appendix.F}{}}
+\newlabel{prop:attention-concentration}{{F}{17}{Concentration Analysis of Tangent-Metric Attention}{appendix.F}{}}
+\newlabel{eq:app-diameter}{{25}{17}{Concentration Analysis of Tangent-Metric Attention}{equation.25}{}}
+\newlabel{eq:app-logit-bound}{{26}{17}{Concentration Analysis of Tangent-Metric Attention}{equation.26}{}}
+\newlabel{eq:app-weight-bound}{{27}{17}{Concentration Analysis of Tangent-Metric Attention}{equation.27}{}}
+\newlabel{eq:app-entropy-bound}{{28}{17}{Concentration Analysis of Tangent-Metric Attention}{equation.28}{}}
+\newlabel{eq:app-softmax}{{29}{17}{Concentration Analysis of Tangent-Metric Attention}{equation.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {G}Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{17}{appendix.G}\protected@file@percent }
+\newlabel{app:affinity}{{G}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{appendix.G}{}}
+\newlabel{eq:app-u}{{30}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.30}{}}
+\newlabel{eq:app-v}{{31}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.31}{}}
+\newlabel{eq:app-craw}{{32}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.32}{}}
+\newlabel{eq:app-c}{{33}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.33}{}}
+\newlabel{eq:app-rank}{{34}{17}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.34}{}}
+\newlabel{eq:app-prox-problem}{{35}{18}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.35}{}}
+\newlabel{eq:app-prox}{{36}{18}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.36}{}}
+\newlabel{eq:app-support}{{37}{18}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.37}{}}
+\newlabel{eq:app-norm-bound}{{38}{18}{Raw-Affinity Rank Budget, Proximal Sparsity, and Residual-Output Bound}{equation.38}{}}
+\gdef \@abspage@last{18}

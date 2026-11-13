@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\usepackage{iclr2027_conference,times}
+\usepackage[T1]{fontenc}
+\input{math_commands.tex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,citebordercolor={0 1 0}}
+\pdfsuppresswarningpagegroup=1
+
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\Sph}{\mathbb{S}}
+\providecommand{\Tangent}{\mathcal{T}}
+\providecommand{\M}{\mathcal{M}}
+\providecommand{\ReLU}{\operatorname{ReLU}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\prox}{\operatorname{prox}}
+\providecommand{\LN}{\operatorname{LN}}
+\providecommand{\vecop}{\operatorname{vec}}
+\providecommand{\softmax}{\operatorname{softmax}}
+\providecommand{\argmax}{\operatorname*{arg\,max}}
+\providecommand{\argmin}{\operatorname*{arg\,min}}
+
+\title{Reliability-Conditioned Product-Tangent Learning for Degraded Acoustics}
+\author{Anonymous Authors}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Synchronized acoustic descriptors offer complementary views of one signal, but they do not fail uniformly: impulsive, co-channel, and additive interference perturb their coordinates, norms, and temporal structure in different ways. A corrupted high-energy descriptor can therefore dominate Euclidean relation learning even when another domain retains useful evidence. We study this failure as reliability-conditioned geometric representation learning. The proposed RMAL-CRNN first estimates coordinate reliability, then applies descriptor-specific spherical tangent projections. Head-specific tangent-metric attention learns cross-domain relations after this correction, and a factorized nonnegative sparse affinity refines the fused sequence over time. Controlled simulations show how these stages respond to individual and compound degradations. Across a public ten-class UAV benchmark and an independent eight-class Glasgow/ACSAC~2022 acoustic-identity release, the complete model reaches $86.30\%$ and $93.88\%$ on the ten-class benchmark at $-5$ and $0$ dB, and $81.18\%$ at $0$ dB on Glasgow versus $74.28\%$ for CRNN. Multi-seed ablations favor the complete path. These results establish a consistent advantage for reliability-before-relation learning across the evaluated descriptors, public benchmarks, and degradation conditions.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/experiments}
+
+\section{Scope and Future Work}
+This study establishes the value of reliability-conditioned geometric learning for six synchronized descriptors, two public UAV benchmarks, and controlled acoustic degradations. The next step is to extend this representation to learned front ends, broader platform and reverberation conditions, and asynchronous multimodal streams, while studying cross-dataset transfer and modality-specific corruption.
+
+\section{Conclusion}
+Compound degradation makes relation learning difficult because synchronized descriptors lose reliability at different rates. RMAL-CRNN addresses this structure through an ordered representation path: coordinate reliability estimation, descriptor-wise product-tangent projection, head-specific tangent-metric relation learning, and sparse temporal-affinity refinement. Controlled mechanism tests and two public-data benchmarks show that this design improves low-SNR recognition, while multi-seed ablations demonstrate complementary gains from its constituent modules. The central contribution is to make reliability part of geometric relation estimation itself, yielding a representation that captures cross-domain structure obscured by unequal descriptor quality.
+
+Future work will extend this framework to heterogeneous multimodal inputs. Audio, vision, radio-frequency, and other sensing streams call for modality-specific reliability estimation, geometry-aware cross-modal alignment, and stable learning under missing or corrupted modalities. Broader cross-dataset evaluation, learned front ends, and efficient long-sequence affinity models will further develop its use in real-world acoustic and multimodal recognition.
+
+\subsection*{Statements}
+\textbf{AI use.} OpenAI Codex assisted with literature discovery and record checking, manuscript language editing, LaTeX preparation, equation-to-code checks, and the reviewer response. The authors are responsible for verifying the final manuscript, citations, code, and experimental results. \textbf{Ethics.} UAV acoustic recognition has safety and dual-use risks; deployment requires authorization, data governance, false-alarm assessment, and human oversight. \textbf{Reproducibility.} The appendices and code package provide the Zenodo source-data record, feature construction, selected training settings, model code, and mathematical details. Ablation results summarize multiple random seeds; the appendix specifies the retained experimental protocol and materials.
+
+\bibliography{references}
+\bibliographystyle{iclr2027_conference}
+
+\appendix
+\input{appendix/details}
+\input{appendix/proofs}
+
+\end{document}

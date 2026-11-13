@@ -1,0 +1,49 @@
+{
+  "purpose": "Numerical verification of the implemented GST, LMA, FNSAR, regularization, and model parameter counts.",
+  "errors": {
+    "coordinatewise_student_t_gate": 4.440892098500626e-16,
+    "gst_scaled_normalization_and_bias": 4.440892098500626e-16,
+    "affine_tangent_orthogonality": 6.661338147750939e-16,
+    "gst_epsilon_branch": 0.0,
+    "lma_projected_squared_distance_attention": 8.881784197001252e-16,
+    "fnsar_affinity_and_residual": 4.440892098500626e-16,
+    "mean_reduced_regularization": 0.0,
+    "cached_affinity": 0.0
+  },
+  "counts": {
+    "GST": 960,
+    "LMA_and_domain_embedding": 4388,
+    "fusion_and_FNSAR": 13442,
+    "classifier": 320586,
+    "full": 339376,
+    "baseline": 333322
+  },
+  "comparison_models": [
+    "SPDNet",
+    "MAtt",
+    "TCN",
+    "InceptionTime",
+    "BiLSTM",
+    "SEResNet1D",
+    "CNNTransformer"
+  ],
+  "comparison_seeds": [
+    1919,
+    2002,
+    2008,
+    2026
+  ],
+  "configured_ablation_seeds": [
+    44,
+    46,
+    55,
+    234,
+    666,
+    989,
+    1919,
+    2002,
+    2008,
+    2026
+  ],
+  "rank_scope_counterexample": "Raw rank 1 becomes rank 2 after entrywise thresholding; theorem is correctly restricted to raw affinity."
+}
